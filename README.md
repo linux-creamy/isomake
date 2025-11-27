@@ -4,6 +4,9 @@ full installation package
 
 # testing
 ```
+pacman -Syy git --noconfirm
+```
+```
 git clone git@github.com:linux-creamy/isomake.git  /install
 ```
 ```
