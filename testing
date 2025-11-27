@@ -1,7 +1,13 @@
 #!/bin/bash
 
-source /post/packer
-source /post/config
+appdir=/install/scripts/chroot
+
+
+vim $appdir/config &&
+
+source $appdir/packer
+source $appdir/config
+
 
 
 ## CLEANSING
@@ -57,11 +63,15 @@ if [[ ! -z $(lspci | grep -i --color '3d\|AMD\|AMD/ATI\|RADEON') ]];then
 fi
 
 
+# DISCONFIG
+cp -fr $appdir/config/* /mnt &&
+cp -fr $appdir/chroot/  /mnt/post &&
+#tar -xf games.tar.gz -C /mnt/usr/pbin/
+
+
 # CONFIGURE
 genfstab -U /mnt > /mnt/etc/fstab &&
-cp -fr /post /mnt/post &&
-tar -xf games.tar.gz -C /mnt/usr/pbin/
-arch-chroot /mnt /bin/bash /post/init.sh &&
+arch-chroot /mnt /bin/bash /post/netpos &&
 
 
 # FINISHING

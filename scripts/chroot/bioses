@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## playstation 3
+mkdir -p /var/games/bios/plays3 &&
+wget -P /var/games/bios/plays3 https://archive.org/download/ps3-official-firmwares/Firmware%204.89/PS3UPDAT.PUP &&
+
+## switch
+mkdir -p /var/games/bios/switch &&
+wget -P /var/games/bios/switch https://github.com/THZoria/NX_Firmware/releases/download/20.5.0/Firmware.20.5.0.zip &&
+cd /var/games/bios/switch &&
+unzip Firmware.20.5.0.zip &&
+cd / &&
