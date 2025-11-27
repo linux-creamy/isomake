@@ -2,7 +2,6 @@
 
 appdir=/install/scripts
 
-
 if [[ $1 == "--install" ]];then
     /bin/bash $appdir/library/install &&
     exit
@@ -15,6 +14,11 @@ fi
 
 if [[ $1 == "--deploy" ]];then
     /bin/bash $appdir/library/deploy &&
+    exit
+fi
+
+if [[ $1 == "--reset" ]];then
+    /bin/bash $appdir/library/reseter &&
     exit
 fi
 
