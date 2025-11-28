@@ -1,5 +1,7 @@
 DISTRO_INSTALLATION_PACKAGE="base
     base-devel
+    scx-scheds
+    wireless-regdb 
     grub
     efibootmgr
     os-prober
