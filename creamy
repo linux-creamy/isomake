@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ -z $1 ]]; then
+    echo "Error : creamy command need additional paramater"
+fi
+
 appdir=/install/scripts
 
 if [[ $1 == "--install" ]];then
@@ -29,5 +33,3 @@ if [[ $1 == "--update" ]];then
     echo "push to gitrepo" && git push &&
     exit
 fi
-
-echo "Error : creamy command need additional paramater"
