@@ -7,7 +7,7 @@ Creamy installation module
 pacman -Syy git --noconfirm
 ```
 ```
-git clone https://github.com/linux-creamy/isomake.git  /install
+git clone https://github.com/linux-creamy/installer.git  /install
 ```
 ```
 /bin/bash /install/creamy --reset
@@ -19,7 +19,7 @@ git clone https://github.com/linux-creamy/isomake.git  /install
 pacman -Syy git --noconfirm
 ```
 ```
-git clone https://github.com/linux-creamy/isomake.git  /install
+git clone https://github.com/linux-creamy/installer.git  /install
 ```
 ```
 /bin/bash /install/creamy --install
