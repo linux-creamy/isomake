@@ -4,7 +4,7 @@ appdir=/install/scripts
 
 
 ## CONFIGURE
-vim $appdir/chroot/config &&
+nano $appdir/chroot/config &&
 source $appdir/chroot/packer
 source $appdir/chroot/config
 
